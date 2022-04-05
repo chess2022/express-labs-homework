@@ -4,8 +4,7 @@ const app = express();
 app.get("/", function (req, res) {
     let number = 99
   res.send(`<h1>99 Bottles of Beer on the Wall</h1><br>
-    <a id="bottles" title="Click to count down"
- href="http://localhost:3000/${number-1}" onclick="MyFunction();return false;">take one down, pass it around...</a>`);
+    <a href="http://localhost:3000/${number-1}">take one down, pass it around...</a>`);
 });
 
 
@@ -16,8 +15,7 @@ app.get("/:number_of_bottles", function (req, res) {
           `<h2>${number} bottles of beer on the wall.</h2>` +
             `<br>` + number + " bottles of beer on the wall, " +
             `<br>` + number + " bottles of beer," +
-            `<br>` + `<a id="bottles" title="Click to count down"
- href="http://localhost:3000/${number-1}" onclick="MyFunction();return false;">take one down, pass it around...</a>`
+            `<br>` + `<a href="http://localhost:3000/${number-1}">take one down, pass it around...</a>`
         );
     } else {
         if (number === 0) {
