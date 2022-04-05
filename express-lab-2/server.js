@@ -41,4 +41,23 @@ app.get("/magic/:question", function (req, res) {
 
 })
 
+app.get("/fibonacci/:number", function (req, res) {
+  let number = parseInt(req.params.number) 
+  let isSquare = function(n){
+    if (n < 0){
+      return false;
+    }
+    if(Number.isInteger(Math.sqrt(n))){
+      return true;
+    }else{
+      return false;
+    }
+}
+    if (isSquare(5*(number*number)-4) || isSquare(5*(number*number)+4)) {
+       res.send("Very good. It is fibonacci.");
+    } else { 
+       res.send("I can tell this is not a fibonacci number."); }
+});
+
+
 app.listen(3000);

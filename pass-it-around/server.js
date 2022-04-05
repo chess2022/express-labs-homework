@@ -7,7 +7,6 @@ app.get("/", function (req, res) {
     <a href="http://localhost:3000/${number-1}">take one down, pass it around...</a>`);
 });
 
-
 app.get("/:number_of_bottles", function (req, res) {
     let number = parseInt(req.params.number_of_bottles)
     if (number > 0) {
@@ -23,6 +22,7 @@ app.get("/:number_of_bottles", function (req, res) {
         }
     }
 })
+
 
 app.listen(3000);
 
