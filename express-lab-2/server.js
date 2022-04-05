@@ -54,9 +54,9 @@ app.get("/fibonacci/:number", function (req, res) {
     }
 }
     if (isSquare(5*(number*number)-4) || isSquare(5*(number*number)+4)) {
-       res.send("Very good. It is fibonacci.");
-    } else { 
-       res.send("I can tell this is not a fibonacci number."); }
+      res.send("Very good. It is fibonacci.");
+        } else { 
+          res.send("I can tell this is not a fibonacci number."); }
 });
 
 
