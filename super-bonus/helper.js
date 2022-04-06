@@ -8,10 +8,17 @@ let rawdata = fs.readFileSync("sightings.json");
 let sightings = JSON.parse(rawdata);
 // console.log(sightings);
 
-// let stateCode = sightings.json[state, ""]
+// let state = sightings.state
 
-let filterByState = sightings.filter(sightings => sightings.state === "AZ")
-console.log(filterByState)
+// let filterByState = sightings.filter(sightings => sightings.state === state)
+// console.log(filterByState)
+
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+});
+
+const args = require("minimist")(process.argv.slice(2));
+args["name"];
 
 
 
@@ -20,7 +27,7 @@ console.log(filterByState)
 
 
 // app.get("/state/:state", function (req, res) {
-//   let number = 99;
+//   let 
 //   res.send();
 // });
 
